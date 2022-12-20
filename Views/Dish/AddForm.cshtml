@@ -1,0 +1,31 @@
+﻿
+@{
+    ViewData["Title"] = "AddForm";
+    <link rel="stylesheet" href="~/css/stylesheet.css" />
+}
+
+<h2>Add a Dish</h2>
+
+<form method="post" action="/dish/add">
+    Team Member Name: <input type="text" name="TMName" value="@ViewBag.TMName"/> 
+    <span class="errorMessage">@ViewBag.TMNameMessage</span><br/><br/>
+    Phone Number: <input type="tel" name="PhoneNumber" value="@ViewBag.PhoneNumber" placeholder="123-123-1234" required
+       @*pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+       title="Phone number must be entered as 111-111-1111 format." *@ /> 
+     <span class="errorMessage">@ViewBag.PhoneMessage</span> <br/><br/>
+   Dish Name: <input type="text" name="DishName" value="@ViewBag.DishName"/> 
+    <span class="errorMessage">@ViewBag.DishNameMessage</span> <br/><br/>
+   Dish Description: <input type="text" name="DishDescription" value="@ViewBag.dishDesc"/> <br/><br/>
+   Category: 
+        <select name="Category" value="@ViewBag.category">
+            <option>Appetizer</option>
+            <option>Salad</option>
+            <option>Main</option>
+            <option>Dessert</option>
+            <option>Beverage</option>
+        </select>
+        <br/><br/>
+    
+    <input type="submit" value="Save" />
+</form>
+

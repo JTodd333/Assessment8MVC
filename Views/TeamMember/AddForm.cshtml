@@ -1,0 +1,27 @@
+﻿
+@{
+    ViewData["Title"] = "AddForm";
+    <link rel="stylesheet" href="~/css/stylesheet.css" />
+}
+
+<h2>RSVP Form</h2><br/>
+
+<form method="post" action="/teammember/add">
+    
+    First Name: <input type="text" name="FirstName" value="@ViewBag.FirstName"/> 
+     <span class="errorMessage">@ViewBag.NameMessage</span> <br/><br/>
+    Last Name: <input type="text" name="LastName" value="@ViewBag.LastName"/> 
+    <span class="errorMessage">@ViewBag.NameMessage</span> <br/><br/>
+    Email: <input type="text" name="EmailAddress" value="@ViewBag.EmailAddress"/> 
+     <span class="errorMessage">@ViewBag.EmailMessage</span> <br/><br/>
+    Date Attending: 
+        <select name="AttendanceDate">
+            <option>10/27/22 12:00 PM</option>
+            <option>10/28/22 11:30 AM</option>
+            <option>10/31/22 1:00 PM</option>
+        </select>
+        <br/><br/>
+    Guest Name: <input type="text" name="GuestName" value="@ViewBag.GuestName"/> <br/><br/>
+    <input type="submit" />
+</form>
+

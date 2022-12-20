@@ -1,0 +1,67 @@
+﻿@model Dish;
+@{
+    ViewData["Title"] = "EditForm";
+    <link rel="stylesheet" href="~/css/stylesheet.css" />
+}
+
+<h2>Edit Dish</h2>
+
+<form method="post" action="/dish/savechanges">
+   <input type="hidden" name="Id" value="@Model.Id" />
+   Team Member Name: <input type="text" name="TMName" value="@Model.TMName"/> <br/><br/>
+     <br/><br/>
+   Phone Number: <input type="tel" name="PhoneNumber" value="@Model.PhoneNumber" 
+       pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+       title="Phone number must be entered as 111-111-1111 format." required /> 
+     <br/><br/>
+   Dish Name: <input type="text" name="DishName" value="@Model.DishName"/> <br/><br/>
+   Dish Description: <input type="text" name="DishDescription" value="@Model.DishDescription"/> <br/><br/>
+   Category: 
+        <select name="Category">
+        @if(Model.Category == "Appetizer")
+        {
+            <option selected>Appetizer</option>
+        }
+        else
+        {
+            <option>Appetizer</option>
+        }
+        @if(Model.Category == "Salad")
+        {
+            <option selected>Salad</option>
+        }
+        else
+        {
+            <option>Salad</option>
+        }
+         @if(Model.Category == "Main")
+        {
+            <option selected>Main</option>
+        }
+        else
+        {
+            <option>Main</option>
+        }
+        @if(Model.Category == "Dessert")
+        {
+            <option selected>Dessert</option>
+        }
+        else
+        {
+            <option>Dessert</option>
+        }
+        @if(Model.Category == "Beverage")
+        {
+            <option selected>Beverage</option>
+        }
+        else
+        {
+            <option>Beverage</option>
+        }   
+
+        </select>
+        <br/><br/>
+    
+    <input type="submit" value="Save" />
+</form>
+

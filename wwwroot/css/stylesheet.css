@@ -1,0 +1,50 @@
+﻿.images {
+    width: 500px;
+    border-radius: 10px;
+}
+
+.errorMessage {
+    color: red;
+    font-weight: bold;
+}
+
+h2 {
+    color: darkcyan;
+    font-size: 24px;
+    font-weight: bold;
+    font-family: 'Segoe UI', Roboto;
+}
+
+.ThankYouMessage {
+    color: darkslategrey;
+    font-style: italic;
+    font-size: 18px;
+}
+
+.WelcomeP {
+    color: darkslategrey;
+    font-size: 18px;
+}
+
+thead {
+    
+    padding: 20px, 20px, 20px, 20px;
+    background-color: #c2c2c2
+}
+
+th, td {
+    
+    padding: 15px;
+    background-color: #c2c2c2
+}
+
+table {
+    background-color: #c2c2c2;
+    border-spacing: 10px;
+}
+
+
+body {
+
+
+}

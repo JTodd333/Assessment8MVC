@@ -1,0 +1,25 @@
+﻿@model Dish;
+@{
+    ViewData["Title"] = "Add";
+    <link rel="stylesheet" href="~/css/stylesheet.css" />
+}
+
+<h2>Thank you!</h2>
+
+
+
+<p class="ThankYouMessage">
+ @Model.TMName, you have signed up to bring: </p>
+
+<p style="padding-left: 30px;">
+    (Category: @Model.Category)<br/>
+    Dish: @Model.DishName <br/>
+    Description: @Model.DishDescription <br/>
+    Phone Number: @Model.PhoneNumber
+</p>
+<br/>
+<img class="images" style="height: 380px;" src="https://assets.mrsfields.com/846921b7cda5.jpg" /> <br/><br/>
+
+
+Return to Dishes <a href="/dish">homepage</a>?
+

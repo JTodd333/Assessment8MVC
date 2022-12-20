@@ -1,0 +1,16 @@
+﻿@model TeamMember;
+@{
+    ViewData["Title"] = "Add";
+    <link rel="stylesheet" href="~/css/stylesheet.css" />
+}
+
+
+<h2>Thank you for RSVP'ing!</h2>
+
+<p>You are registered to attend the potluck on <b>@Model.AttendanceDate.ToString("MM/dd/yyyy hh:mm tt")</b>, @Model.FirstName!<br/>
+We look forward to seeing you and @Model.GuestName. <br/>
+We will contact you at <b> @Model.EmailAddress </b> with any updates.
+</p>
+<br/>
+<img class="images" src="https://images.unsplash.com/photo-1549032305-e816fabf0dd2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" /> <br/><br/>
+Return to <a href="/home/index">Home Page</a>?

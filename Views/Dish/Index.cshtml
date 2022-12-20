@@ -1,0 +1,38 @@
+﻿@model List<Dish>;
+@{
+    ViewData["Title"] = "Index";
+    <link rel="stylesheet" href="~/css/stylesheet.css" />
+}
+
+<h2>Dishes Being Brought</h2>
+
+Add new dish <a href="/dish/addform"><b>here</b></a> <br/><br/>
+
+<table>
+    <thead>
+        <th>TM Name</th>
+        <th>TM Phone Number</th>
+        <th>Dish Name</th>
+        <th>Dish Description</th>
+        <th>Category</th>
+        <th>Edit</th>
+        <th>Delete</th>
+
+
+    </thead>
+    <tbody>
+        @foreach (Dish dish in Model)
+        {
+            <tr>
+                <td>@dish.TMName</td>
+                <td>@dish.PhoneNumber</td>
+                <td>@dish.DishName</td>
+                <td>@dish.DishDescription</td>
+                <td>@dish.Category</td>
+                <td><a href="/dish/editform?Id=@dish.Id">Edit</a></td>
+                <td><a href="/dish/delete?Id=@dish.Id">Delete</a></td>
+            </tr>
+        }
+    </tbody>
+</table>
+
